@@ -33,7 +33,7 @@ class HomeTransactions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Iconsax.send_2, color: Colors.white, size: TSizes.iconSm,),
-                Text('Send',style: Theme.of(context).textTheme.labelSmall)
+                Text('Send',style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white))
               ],
             ),
           ),
@@ -52,7 +52,7 @@ class HomeTransactions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Iconsax.receive_square, color: Colors.white, size: TSizes.iconSm,),
-                Text('Recieve',style: Theme.of(context).textTheme.labelSmall)
+                Text('Recieve',style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white))
               ],
             ),
           ),
@@ -71,7 +71,7 @@ class HomeTransactions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Iconsax.add_square, color: Colors.white, size: TSizes.iconSm),
-                Text('Add',style: Theme.of(context).textTheme.labelSmall)
+                Text('Add',style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white))
               ],
             ),
           ),

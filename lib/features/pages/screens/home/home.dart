@@ -13,47 +13,49 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(TSizes.spaceBtwItems),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    //header
-                    SizedBox(height: TSizes.spaceBtwItems),
-                    HomeHeader(),
-
-                    //Balance
-                    SizedBox(
-                      height: TSizes.spaceBtwItems,
-                    ),
-                    Text('Balance',
-                        style: Theme.of(context).textTheme.bodyMedium),
-                    Text(TTexts.accountBalance,
-                        style: Theme.of(context).textTheme.headlineMedium),
-
-                    //Transactions
-                    SizedBox(
-                      height: TSizes.spaceBtwItems,
-                    ),
-                    HomeTransactions(),
-
-                    //Assets
-                    SizedBox(
-                      height: TSizes.spaceBtwItems,
-                    ),
-                    TSectionHeading(
-                      title: 'Assets',
-                      showActionButton: false,
-                    ),
-
-                    HomeAssets(),
-                  ]),
-            ),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(TSizes.spaceBtwItems),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //header
+                      SizedBox(height: TSizes.spaceBtwItems),
+                      HomeHeader(),
+      
+                      //Balance
+                      SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      Text('Balance',
+                          style: Theme.of(context).textTheme.bodyMedium),
+                      Text(TTexts.accountBalance,
+                          style: Theme.of(context).textTheme.headlineMedium),
+      
+                      //Transactions
+                      SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      HomeTransactions(),
+      
+                      //Assets
+                      SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      TSectionHeading(
+                        title: 'Assets',
+                        showActionButton: false,
+                      ),
+      
+                      HomeAssets(),
+                    ]),
+              ),
+            ],
+          ),
         ),
       ),
     );

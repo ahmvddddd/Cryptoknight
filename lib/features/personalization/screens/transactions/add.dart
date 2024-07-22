@@ -15,69 +15,71 @@ class AddScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TAppBar(
-                      title: Text('Add',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall),
-                      showBackArrow: true,
-                    ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              //header
-              Column(
-                children: [
-                  
-                  //Acount Balance
-                  Padding(
-                    padding: const EdgeInsets.all(TSizes.spaceBtwItems),
-                    child: TRoundedContainer(
-                      padding: const EdgeInsets.all(TSizes.defaultSpace),
-                      width: 360,
-                      backgroundColor: TColors.primary.withOpacity(0.8),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          //Texts
-                          Text(TTexts.accountBalance,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineMedium),
-                          Text(TTexts.accountText,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelMedium),
-                        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: TAppBar(
+                        title: Text('Add',
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineSmall),
+                        showBackArrow: true,
                       ),
-                    ),
-                  ),
-                ],
-              ),
-
-              //Body
-              Padding(
-                padding: EdgeInsets.all(TSizes.spaceBtwItems),
-                child: Column(
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                //header
+                Column(
                   children: [
                     
-                    TransactionHistoryCard(),
-
-                    const SizedBox(height: TSizes.spaceBtwItems),
-                    TSectionHeading(
-                      title: 'Select Deposit Method',
-                      showActionButton: false,
+                    //Acount Balance
+                    Padding(
+                      padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+                      child: TRoundedContainer(
+                        padding: const EdgeInsets.all(TSizes.defaultSpace),
+                        width: 360,
+                        backgroundColor: TColors.primary.withOpacity(0.8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            //Texts
+                            Text(TTexts.accountBalance,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium!.copyWith(color: Colors.white)),
+                            Text(TTexts.accountText,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelMedium!.copyWith(color: Colors.white)),
+                          ],
+                        ),
+                      ),
                     ),
-
-                    //Deposit Method
-                    const SizedBox(height: TSizes.spaceBtwItems),
-                    DepositMethodCard(),
                   ],
                 ),
-              ),
-            ],
-          ),
-        ));
+      
+                //Body
+                Padding(
+                  padding: EdgeInsets.all(TSizes.spaceBtwItems),
+                  child: Column(
+                    children: [
+                      
+                      TransactionHistoryCard(),
+      
+                      const SizedBox(height: TSizes.spaceBtwItems),
+                      TSectionHeading(
+                        title: 'Select Deposit Method',
+                        showActionButton: false,
+                      ),
+      
+                      //Deposit Method
+                      const SizedBox(height: TSizes.spaceBtwItems),
+                      DepositMethodCard(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )),
+    );
   }
 }
