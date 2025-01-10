@@ -8,8 +8,14 @@ Below are screenshots of crypto knight app.
 ![Home page dark mode](./screenshots/ck_01.jpg)
 Home screen in dark screen mode.
 
+
+
+
 ![Home page light mode](./screenshots/ckw_01.jpg)
 Home screen in  light screen mode
+
+
+
 
 
 #Crypto Page
@@ -17,14 +23,22 @@ Home screen in  light screen mode
 ![Crypto tokens page dark mode](./screenshots/ck_02.jpg)
 Crypto tokens page in dark screen mode
 
+
+
+
 ![Crypto tokens page light mode](./screenshots/ckw_02.jpg)
 Crypto tokens page in light screen mode
+
+
+
 
 
 #Xchange page
 
 ![Xchange page dark mode](./screenshots/ck_03.jpg)
 Xchange page dark screen mode
+
+
 
 ![Xchange page light mode](./screenshots/ckw_04.jpg)
 Xchange page light screen mode
